@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlissBakery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>Bliss Bakery</h1>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+     
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Freshly Baked Delights</h2>
+                <p style="color: rgb(70, 45, 13);">Indulge in our handcrafted pastries, cakes, and bread made with love and the finest ingredients.</p>
+                <a href="#products" class="btn">Shop Now</a>
+            </div>
+        </section>
+
+        <section class="about">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <p>Welcome to <strong>Bakery Bliss</strong>, where every bite tells a story. Since 1995, we’ve been crafting delicious treats that bring joy to your day. Our bakers use traditional recipes and the freshest ingredients to create mouthwatering pastries, cakes, and bread.</p>
+                <p>Visit us today and experience the magic of freshly baked goods!</p>
+            </div>
+        </section>
+
+        <section class="offers">
+            <h2>Special Offers</h2>
+            <div class="offer-grid">
+                <div class="offer-card">
+                    <h3>20% Off Cakes</h3>
+                    <p>Celebrate with our delicious cakes. Use code <strong>CAKE20</strong> at checkout.</p>
+                </div>
+                <div class="offer-card">
+                    <h3>Buy 1, Get 1 Free</h3>
+                    <p>Get a free croissant with every purchase of a loaf of bread.</p>
+                </div>
+                <div class="offer-card">
+                    <h3>Free Delivery</h3>
+                    <p>Enjoy free delivery on orders over $50.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <h2>Our Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="./images/1.avif" width="300" height="200" alt="Fresh Bread">
+                    <div class="gallery-overlay">
+                        <p>Fresh Bread</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/2.jpg" width="300" height="200" alt="Cupcakes">
+                    <div class="gallery-overlay">
+                        <p>Cupcakes</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/3.jpg" width="300" height="200" alt="Pastries">
+                    <div class="gallery-overlay">
+                        <p>Pastries</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"The best bakery in town! Their chocolate cake is to die for."</p>
+                    <p><strong>- Sarah L.</strong></p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"I love their croissants. Always fresh and delicious!"</p>
+                    <p><strong>- John D.</strong></p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Amazing service and even better pastries. Highly recommend!"</p>
+                    <p><strong>- Emily T.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <div class="product-card" data-id="1" data-name="Chocolate Cake" data-price="35.00">
+                    <img src="./images/1-1.jpg" alt="Chocolate Cake">
+                    <h3>Chocolate Cake</h3>
+                    <p>$35.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-id="2" data-name="Croissants" data-price="4.50">
+                    <img src="./images/2-2.jpg" alt="Croissants">
+                    <h3>Croissants</h3>
+                    <p>$4.50</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-id="3" data-name="Apple Pie" data-price="25.00">
+                    <img src="./images/3-3.jpg" alt="Apple Pie">
+                    <h3>Apple Pie</h3>
+                    <p>$25.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-id="4" data-name="Cupcakes" data-price="15.00">
+                    <img src="./images/2.jpg" alt="Cupcakes">
+                    <h3>Cupcakes</h3>
+                    <p>$15.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-id="5" data-name="Bread" data-price="10.00">
+                    <img src="./images/1.avif" alt="Bread">
+                    <h3>Bread</h3>
+                    <p>$10.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-id="6" data-name="Pastries" data-price="50.00">
+                    <img src="./images/3.jpg" alt="Pastries">
+                    <h3>Pastries</h3>
+                    <p>$50.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-id="7" data-name="Donut" data-price="20.00">
+                    <img src="./images/4.jpg" alt="Donut">
+                    <h3>Donut</h3>
+                    <p>$20.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-id="8" data-name="Brownie" data-price="40.00">
+                    <img src="./images/5.jpg" alt="Brownie">
+                    <h3>Brownie</h3>
+                    <p>$40.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Bakery Bliss. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

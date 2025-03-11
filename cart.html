@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Bakery Bliss</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>Bakery Bliss</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="cart.html" class="active">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <button id="checkout">Proceed to Checkout</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Bakery Bliss. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Display cart items
+        const cart = JSON.parse(localStorage.getItem('cart'));
+        const cartItems = document.getElementById('cart-items');
+
+        if (cart.length === 0) {
+            cartItems.innerHTML = '<p>Your cart is empty.</p>';
+        } else {
+            let total = 0;
+            cart.forEach(item => {
+                cartItems.innerHTML += `
+                    <div class="cart-item">
+                        <h3>${item.name}</h3>
+                        <p>$${item.price}</p>
+                    </div>
+                `;
+                total += parseFloat(item.price);
+            });
+            cartItems.innerHTML += `<p><strong>Total: $${total.toFixed(2)}</strong></p>`;
+        }
+
+        // Checkout button
+        document.getElementById('checkout').addEventListener('click', () => {
+            alert('Thank you for your purchase!');
+            localStorage.setItem('cart', JSON.stringify([]));
+            window.location.href = 'index.html';
+        });
+
+        // Update cart count
+        document.getElementById('cart-count').textContent = cart.length;
+    </script>
+</body>
+</html>
